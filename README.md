@@ -3,7 +3,7 @@
 =============================================================================================
 =============================================================================================
 
-CS224n (Lecture and Exercise1-3 Done)
+CS224n (Lecture and Exercise1-3 Done with Pytorch)
 
 From: 
 
@@ -31,7 +31,7 @@ Coursea NLP Specialization (All Done)
 
 From:
 
-https://www.coursera.org/specializations/natural-language-processing
+https://www.coursera.org/specializations/natural-language-processing (sign the course for downloading models for transfer learning)
 
 Consulted:
 
@@ -40,3 +40,8 @@ https://www.bilibili.com/video/BV1mA411v7Nv?p=33
 https://github.com/amanjeetsahu/Natural-Language-Processing-Specialization
 
 https://github.com/tsuirak/deeplearning.ai/tree/master/Natural%20Language%20Processing%20Specialization
+
+Note: 
+
+Course3 and Course4 are supported by a new deep learning platform called 'Trax', use Linux Ubuntu System for this. 
+
