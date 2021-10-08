@@ -133,6 +133,43 @@ Course3 and Course4 are supported by a new deep learning platform called 'Trax',
     
 >>> C2_W1 Auto Correction 
 
+1, Data Preprocessing 
+
+    import re 
+    from collections import Counter 
+    import numpy as np 
+    import pandas as pd 
+    
+    # build a dict with lower case 
+    def process_data(file_name):
+        return words
+        
+    # get word count 
+    def get_count(word_l): 
+        return word_count_dict 
+        
+    # get word probability 
+    def get_probs(word_count_dict): 
+        return probs 
+        
+2, String Manipulations 
+
+    def delete_letter() 
+    
+    def switch_letter() 
+    
+    def replace_letter() 
+    
+    def insert_letter() 
+    
+3, Combining the edits 
+
+    def edit_one_letter() 
+    
+    ###
+    
+4, Minimun Edit Distence 
+
 
 
 
