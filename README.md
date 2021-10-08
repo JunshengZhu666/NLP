@@ -170,8 +170,69 @@ Course3 and Course4 are supported by a new deep learning platform called 'Trax',
     
 4, Minimun Edit Distence 
 
+    def min_edit_distance(source, target, ins_cost = 1, del_cost = 1, rep_cost = 2): 
+        return D, med
+        
+>>> C2_W2 POS Tagging and Hidden Markov Model 
 
+0, Data preparation 
 
+    # load in training corpus 
+    # read in vocabulary, split 
+    # assign unknown tokens 
+    import string.punctuation 
+    
+1, POS Tagging
+
+    def create_dictionaries(training_corpus, vocab):
+        return emission_counts, transition_counts, tag_counts 
+        
+    # testing 
+    def predict_pos(prep, y, emission_counts, vocab, states): 
+        return accuracy 
+        
+2, Hidden Markov Models 
+
+    def create_transition_matrix(alpha, tag_counts, transition_counts): 
+        return A 
+        
+    def create_emission_matrix(alpha, tag_counts, emission_counts, vocab):
+        return B 
+        
+    # get emission prob matrix 
+    
+3, Viterbi Algorithm 
+
+>>> C2_W3 Language Modeling and N-gram 
+
+1, Corpus preprocessing 
+
+    # lower 
+    # remove special char 
+    # split 
+    # tokenize 
+    
+    def sentence_to_trigram(tokenized_sentence):
+    
+2, Building the language model 
+
+    def single_pass_trigram_count_matrix(corpus):
+        return bigrams, vocabulary, count_matrix 
+        
+    # evaluation 
+    def train_validation_test_split(data, train_percent, validation_percent):
+        return train_data, validation_data, test_data
+        
+3, Out of vocabulary words 
+    
+    from collections import Counter
+    vocabulary = Counter(word_counts).most_common(M)
+    
+    # smoothing 
+    # back off 
+    
+    
+    
 
 
 
