@@ -231,8 +231,48 @@ Course3 and Course4 are supported by a new deep learning platform called 'Trax',
     # smoothing 
     # back off 
     
+>>> C2_W4 Continusly Bag of Words and Neural Networks
     
-    
+1, CBOW model 
 
+    # packages and helper functions 
+    import nltk
+    from nltk.tokenize import word_tokenize
+    import numpy as np
+    from collections import Counter
+    from utils2 import sigmoid, get_batches, compute_pca, get_dict
+
+    # frequency of the words 
+    fdist = nltk.FreqDist(word for word in data)
+    
+    # index mapping 
+    word2Ind, Ind2word = get_dict(data)
+    
+2, Training the model 
+
+    def initialize_model(N, V, random_seed):
+        return W1, W2, b1, b2 
+        
+    def softmax(z): 
+        return yhat 
+        
+    def forward_prop(x, W1, W2, b1, b2): 
+        return z, h
+        
+    def compute_cost(y, yhat, batch_size): 
+        return cost 
+        
+    def backprop(x, yhat, y, h, W1, W2, b1, b2, batch_size): 
+        return grad_W1, grad_W2, grad_b1, grad_b2
+        
+    def gradient_descent(data, word2Ind, N, V, num_iters, alpha=0.03):
+        return W1, W2, b1, b2
+        
+3, Visualizing the word vectors 
+
+
+
+    
+    
 
 
