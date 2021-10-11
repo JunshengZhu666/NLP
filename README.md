@@ -272,8 +272,138 @@ Course3 and Course4 are supported by a new deep learning platform called 'Trax',
         
 3, Visualizing the word vectors 
 
+\\\
+
+>>> C3_W1 DNN and Sentiment Analysis 
+
+1, Trax platform introduction 
+
+    from trax import layers as tl 
+    from trax import shapes 
+    from trax import fastmath 
+    
+    # relu layer 
+    relu = tl.Relu()
+    
+    # concatenate layer
+    concat = tl.Concatenate() 
+    
+    # layer combinator 
+    serial = tl.Serial(
+        tl.LayerNorm(), 
+        tl.Relu(), 
+        times_two, 
+        )
+        
+2, Class method recap 
+
+3, Import the data 
+
+    # load data
+    # get length 
+    # split data 
+    
+    # Set labels 
+    train_y = np.append(np.ones(len(train_pos)), np.zeros(len(train_neg)
+    
+    # def process_tweet(): tokenizing 
+    
+    # Build the vocabulary
+    # include special tokens 
+    # started with pad, end of line and unk tokens
+    Vocab = {'__PAD__': 0, '__</e>__': 1, '__UNK__': 2} 
+
+    # Note that we build vocab using training data
+    for tweet in train_x: 
+        processed_tweet = process_tweet(tweet)
+        for word in processed_tweet:
+            if word not in Vocab: 
+                Vocab[word] = len(Vocab)    
+
+    # Convert a tweet to a tensor 
+    def tweet_to_tnesor(): 
+    
+    # Create a batch generator 
+    def data_generator(): 
+
+4, Defining classes 
+
+    # Relu class 
+    class Relu(Layer): 
+        return activation 
+        
+    # Dense class 
+    class Dense(Layer): 
+        return self.weights 
+        
+    # classifier function
+    def classifier(vocab_size=len(Vocab), embedding_dim=256, output_dim=2, mode='train'):
+
+        # Create embedding layer
+        embed_layer = tl.Embedding(
+            vocab_size=vocab_size, # Size of the vocabulary
+            d_feature=embedding_dim)  # Embedding dimension
+
+        # Create a mean layer, to create an "average" word embedding
+        mean_layer = tl.Mean(axis=1)
+
+        # Create a dense layer, one unit for each output
+        dense_output_layer = tl.Dense(n_units =  output_dim)
 
 
+        # Create the log softmax layer (no parameters needed)
+        log_softmax_layer = tl.LogSoftmax()
+
+        # Use tl.Serial to combine all layers
+        # and create the classifier
+        # of type trax.layers.combinators.Serial
+        model = tl.Serial(
+          embed_layer, # embedding layer
+          mean_layer, # mean layer
+          dense_output_layer, # dense output layer 
+          log_softmax_layer # log softmax layer
+        )
+           
+        # return the model of type
+        return model
+        
+5, Training 
+
+    from trax.supervised import training 
+    
+    # TrainTask 
+    train_task = training.TrainTask(
+    labeled_data=train_generator(batch_size=batch_size, shuffle=True),
+    loss_layer=tl.CrossEntropyLoss(),
+    optimizer=trax.optimizers.Adam(0.01),
+    n_steps_per_checkpoint=10,
+    ) 
+    
+    # EvalTask 
+    eval_task = training.EvalTask(
+    eval_task = training.EvalTask(
+    labeled_data=val_generator(batch_size=batch_size, shuffle=True),
+    metrics=[tl.CrossEntropyLoss(), tl.Accuracy()],
+    )
+    
+    # Loop 
+    def train_model(): 
+    
+6, Make prediction 
+    
+    # feed the tweet tensors into the model to get a prediction
+    tmp_pred = training_loop.eval_model(tmp_inputs)
+    
+7, Evaluation and Test 
+
+    def compute_accuracy(preds, y, y_weights):
+        return accuracy, weighted_num_correct, sum_weights
+        
+    def test_model(): 
+        return accuracy 
+       
+    def predict(sentence):
+        return preds, sentiment
     
     
 
