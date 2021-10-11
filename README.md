@@ -69,6 +69,7 @@ Course3 and Course4 are supported by a new deep learning platform called 'Trax',
 
 5, Error analysis 
 
+\\\
 
 >>> C1_W2 Naive bayes and sentiment anaysis 
 
@@ -95,7 +96,8 @@ Course3 and Course4 are supported by a new deep learning platform called 'Trax',
 
     def compute_pca(X, n_components = 2):
         return X_reduced
-        
+
+\\\
         
 >>> C1_W4 Naive Machine Translation and Local Sensitive Hashing  
 
@@ -173,6 +175,8 @@ Course3 and Course4 are supported by a new deep learning platform called 'Trax',
     def min_edit_distance(source, target, ins_cost = 1, del_cost = 1, rep_cost = 2): 
         return D, med
         
+\\\ 
+        
 >>> C2_W2 POS Tagging and Hidden Markov Model 
 
 0, Data preparation 
@@ -203,6 +207,8 @@ Course3 and Course4 are supported by a new deep learning platform called 'Trax',
     
 3, Viterbi Algorithm 
 
+\\\ 
+
 >>> C2_W3 Language Modeling and N-gram 
 
 1, Corpus preprocessing 
@@ -231,7 +237,7 @@ Course3 and Course4 are supported by a new deep learning platform called 'Trax',
     # smoothing 
     # back off
 
-\
+\\\
 
 >>> C2_W4 Continusly Bag of Words and Neural Networks
     
