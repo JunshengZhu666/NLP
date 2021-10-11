@@ -405,6 +405,45 @@ Course3 and Course4 are supported by a new deep learning platform called 'Trax',
     def predict(sentence):
         return preds, sentiment
     
+\\\
+
+>>> C3_W2 GRU and Language Modeling  
+
+1, Import the data 
+
+    # remove leading and trailing whitespace
+    pure_line = line.strip()
     
+    # convert each line to tensor 
+    def line_to_tensor()
+    
+    # batch generator 
+    # mask = 1, pad = 0
+    def data_generator(batch_size, max_length, data_lines, line_to_tensor, shuffle): 
+    
+    # repeat batch 
+    import itertools 
+    
+2, Define the GRU model 
+
+    def GRULM(vocab_size = 256, d_model = 512, n_layers = 2, mode = 'train'):
+        model = tl.Serial(
+          tl.ShiftRight(mode=mode), # Stack the ShiftRight layer
+          tl.Embedding(vocab_size=vocab_size, d_feature=d_model), # Stack the embedding layer
+          [tl.GRU(n_units=d_model) for _ in range(n_layers)], # Stack GRU layers of d_model 
+          tl.Dense(n_units=vocab_size), # Dense layer
+          tl.LogSoftmax()  # Log Softmax
+        )
+        return model       
+    
+3, Training 
+
+    # training 
+    def train_model(): 
+        # data generator 
+        # TrainTask 
+        # EvalTask 
+        # Loop 
+        
 
 
