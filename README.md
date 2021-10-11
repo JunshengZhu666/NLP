@@ -45,6 +45,8 @@ Note:
 
 Course3 and Course4 are supported by a new deep learning platform called 'Trax', use Linux Ubuntu System for this. 
 
+\\\
+
 >>> C1_W1 Logistic Regression on sentiment analysis 
 
 0, Preprocessing 
@@ -133,6 +135,8 @@ Course3 and Course4 are supported by a new deep learning platform called 'Trax',
 
     # find the most similar tweets with LSH and similarity scores
     
+\\\
+
 >>> C2_W1 Auto Correction 
 
 1, Data Preprocessing 
@@ -494,4 +498,61 @@ Course3 and Course4 are supported by a new deep learning platform called 'Trax',
     def predict(sentence, model, vocab, tag_map):
         return pred
 
-        
+\\\
+
+>>> Siamese Networks and Question Duplication 
+
+1, Siamese Model 
+
+    # L2 Normalization 
+    def normalize(x) 
+    
+    # Use two LSTM in Parallel
+    # Define the LSTM model
+    LSTM = tl.Serial(
+            tl.Embedding(vocab_size=vocab_size, d_feature=model_dimension),
+            tl.LSTM(model_dimension),
+            tl.Mean(axis=1),
+            tl.Fn('Normalize', lambda x: normalize(x))
+        )
+
+    # Use the Parallel combinator to create a Siamese model out of the LSTM 
+    Siamese = tl.Parallel(LSTM, LSTM)
+
+2, Modified Triplet Loss 
+
+    # cosine similarity 
+    def cosine_similarity(v1, v2): 
+    
+    # hard negative mining 
+    
+3, Import the data 
+
+    # split the data 
+    # explor the data 
+    # build the vocabulary (with defaultfict) 
+    
+    # convert the question to a tensor 
+    for i in range(len(Q1_train)):
+        Q1_train[i] = [vocab[word] for word in Q1_train[i]]
+        Q2_train[i] = [vocab[word] for word in Q2_train[i]]
+
+
+    for i in range(len(Q1_test)):
+        Q1_test[i] = [vocab[word] for word in Q1_test[i]]
+        Q2_test[i] = [vocab[word] for word in Q2_test[i]]
+    
+    # data generator 
+    def data_generator(Q1, Q2, batch_size, pad = 1, shuffle = True)
+    
+4, Build the model 
+
+    def Siamese()
+    
+    def TripletLossFn() 
+    
+5, Training 
+
+    def train_model() 
+    
+    
