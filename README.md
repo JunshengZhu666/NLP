@@ -230,7 +230,9 @@ Course3 and Course4 are supported by a new deep learning platform called 'Trax',
     
     # smoothing 
     # back off 
-    
+
+\n 
+
 >>> C2_W4 Continusly Bag of Words and Neural Networks
     
 1, CBOW model 
