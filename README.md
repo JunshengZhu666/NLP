@@ -451,5 +451,47 @@ Course3 and Course4 are supported by a new deep learning platform called 'Trax',
         # EvalTask 
         # Loop 
         
+\\\
+>>> C3_W3 Named Entity Recongnition 
 
+1, Exploring the data 
 
+2, Importing the data 
+
+    # vocab, tag_map 
+    
+    # data generator 
+    def data_generator(
+                        batch_size,
+                        x, # list tensor
+                        y, # list tensor 
+                        shuffle, 
+                        pad, 
+                        verbose, 
+                        )
+        return X # size of (batch_size, max_len) 
+               Y # size of (batch_size, max_len) 
+               
+3, Building the model 
+
+    # LSTM model 
+    def NER() 
+        return model 
+        
+4, Train the model 
+
+    # mask out the padding for training
+    
+    # def train_model(): 
+        
+    # use a pretrained model 
+    
+5, Evaluation 
+
+    def evaluate_prediction(pred, labels, pad): 
+    
+    # prediction
+    def predict(sentence, model, vocab, tag_map):
+        return pred
+
+        
