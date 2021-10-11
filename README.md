@@ -229,9 +229,9 @@ Course3 and Course4 are supported by a new deep learning platform called 'Trax',
     vocabulary = Counter(word_counts).most_common(M)
     
     # smoothing 
-    # back off 
+    # back off
 
-\n 
+\
 
 >>> C2_W4 Continusly Bag of Words and Neural Networks
     
